@@ -22,7 +22,7 @@ public class Anime {
         this.episodes = episodes;
     }
 
-    //we added an new parameter into the second init() method
+    //we added a new parameter into the second init() method
     public void init(String name, String type, int episodes, String genre) {
         //we can't have ambiguity between the methods, they must have some difference
         this.init(name, type, episodes);//we can assignt the responsibility of these attributes

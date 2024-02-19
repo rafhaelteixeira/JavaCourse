@@ -7,4 +7,7 @@ public class Professor {
     public String name;
     public int age;
     public char gender;
+    //by creating a new class we are separating the classes based on their own purposes
+    //and separating attributes and methods, so the program become highly cohesive.
+    //by adding test classes to contain de main method we are also augmenting cohesion
 }
