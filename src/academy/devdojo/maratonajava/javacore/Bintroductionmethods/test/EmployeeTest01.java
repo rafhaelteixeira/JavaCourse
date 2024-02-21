@@ -11,7 +11,7 @@ public class EmployeeTest01 {
 
 
         employee.printData();
-        employee.salaryAverage();
+
 
 
     }

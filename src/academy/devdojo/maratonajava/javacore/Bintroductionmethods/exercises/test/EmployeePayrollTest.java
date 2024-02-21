@@ -2,16 +2,35 @@ package academy.devdojo.maratonajava.javacore.Bintroductionmethods.exercises.tes
 
 import academy.devdojo.maratonajava.javacore.Bintroductionmethods.exercises.domain.EmployeePayroll;
 
+import java.util.Scanner;
+
+
 public class EmployeePayrollTest {
     public static void main(String[] args) {
         EmployeePayroll employee = new EmployeePayroll();
+        Scanner input = new Scanner(System.in);
 
-        employee.name = "Rafhael";
-        employee.id = 123;
-        employee.dailyPay = employee.calculateDailyPay(35.50);
-        employee.weeklyPay = employee.calculateWeeklyPay(5);
+        System.out.println("Welcome to our payments calculator system");
+        System.out.println("Type your name, ID, hourly wage, and how many days you worked this week:");
 
-        System.out.println("Eployee: " + employee.name + "\n With the ID: " + employee.id + "\n Received daily: "
-                + employee.dailyPay + "\n Therefore, Weekly: " + employee.weeklyPay);
+        System.out.print("Name: ");
+        String name = input.next();
+        employee.setName(name);
+
+        System.out.print("ID: ");
+        int id = input.nextInt();
+        employee.setId();
+
+        System.out.print("Hourly Wage (use \",\" to separate the decimals): ");
+        double hourlyWage = input.nextDouble();
+        employee.calculateDailyPay(hourlyWage);
+
+        System.out.print("Days worked this week: ");
+        int weekDays = input.nextInt();
+        employee.calculateWeeklyPay(weekDays);
+
+        System.out.println("Your daily pay: " + employee.getDailyPay());
+        System.out.println("Your weekly pay this week: " + employee.getWeeklyPay());
+
     }
 }

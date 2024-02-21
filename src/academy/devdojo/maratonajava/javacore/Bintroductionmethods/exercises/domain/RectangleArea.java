@@ -4,12 +4,16 @@ package academy.devdojo.maratonajava.javacore.Bintroductionmethods.exercises.dom
 Include a method to calculate and return the area of the rectangle.*/
 public class RectangleArea {
 
-    public int lenght;
-    public int width;
+    private double lenght;
+    private double width;
 
-    public void calculateArea() {
-        int area = (lenght * width);
-        System.out.println(area);
-
+    public double calculateArea() {
+        return (this.lenght * this.width);
+    }
+    public void setLenght(double lenght) {
+        this.lenght = lenght;
+    }
+    public void setWidth(double width) {
+        this.width = width;
     }
 }

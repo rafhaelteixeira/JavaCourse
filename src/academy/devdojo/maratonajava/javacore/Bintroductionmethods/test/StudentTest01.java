@@ -20,6 +20,7 @@ public class StudentTest01 {
         studentPrinter.print(student01);
         studentPrinter.print(student02);
         System.out.println("=============================");
+        //printing the altered value
         studentPrinter.print(student01);
         studentPrinter.print(student02);
 

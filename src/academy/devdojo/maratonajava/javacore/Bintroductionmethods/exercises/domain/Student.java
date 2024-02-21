@@ -4,13 +4,25 @@ package academy.devdojo.maratonajava.javacore.Bintroductionmethods.exercises.dom
  Include a method to display the student's information.*/
 public class Student {
 
-    public String name;
-    public double grade;
-    public String subject;
+    private String name;
+    private double grade;
+    private String subject;
 
     public void displayInfo() {
         System.out.println(this.name);
         System.out.println(this.grade);
         System.out.println(this.subject);
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGrade(double grade) {
+        this.grade = grade;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 }

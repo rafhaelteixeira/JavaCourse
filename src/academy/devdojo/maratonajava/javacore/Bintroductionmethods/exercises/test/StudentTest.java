@@ -5,9 +5,9 @@ import academy.devdojo.maratonajava.javacore.Bintroductionmethods.exercises.doma
 public class StudentTest {
     public static void main(String[] args) {
         Student student = new Student();
-        student.name = "Rafhael";
-        student.grade = 10;
-        student.subject = "Java Programming";
+        student.setName("Rafhael");
+        student.setGrade(10.4);
+        student.setSubject("Java Programming");
 
         System.out.println("Displaying Student's info");
         student.displayInfo();

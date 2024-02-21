@@ -1,30 +1,34 @@
 package academy.devdojo.maratonajava.javacore.Bintroductionmethods.exercises.domain;
 
-import java.util.Scanner;
-
 /*Create a BankAccount class with attributes accountNumber,
 balance, and methods to deposit and withdraw money.*/
 public class BankAccount {
-    public int accountNumber;
-    public double balance;
-    Scanner input = new Scanner(System.in);
+    private double balance;
 
-    public double deposit() {
-        double deposit = input.nextDouble();
+    public void deposit(double deposit) {
         if (deposit <= 0) {
-            System.out.println("Invalid Deposit Value");
+            System.out.println("Invalid deposit");
+            return;
         }
-        balance += deposit;
+        this.balance += deposit;
+    }
+
+    public void withdrawl(double withdrawl) {
+        if (withdrawl <= 0) {
+            System.out.println("Invalid withdrawl");
+            return;
+        }
+        balance -= withdrawl;
+    }
+
+    public void setAccountNumber() {
+    }
+
+    public double getBalance() {
         return balance;
     }
 
-    public double withdrawl() {
-        double withdrawl = input.nextDouble();
-        if (withdrawl <= 0) {
-            System.out.println("Invalid Deposit Value");
-        }
-        balance -= withdrawl;
-        return balance;
-
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 }

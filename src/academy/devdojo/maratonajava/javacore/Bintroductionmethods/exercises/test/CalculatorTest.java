@@ -2,21 +2,63 @@ package academy.devdojo.maratonajava.javacore.Bintroductionmethods.exercises.tes
 
 import academy.devdojo.maratonajava.javacore.Bintroductionmethods.exercises.domain.Calculator;
 
+import java.util.Scanner;
+
 public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
-        calculator.chooseOperation();
-        calculator.typeNumbers();
+        Scanner input = new Scanner(System.in);
+        double number1;
+        double number2;
 
+        System.out.println("Choose the Operation: ");
+        System.out.println("1 - Addition, 2 - Subtraction, 3 - Multiply, 4 - Divide");
+        byte operation = input.nextByte();
 
-        if (calculator.operation == 1) {
-            calculator.addition();
-        } else if (calculator.operation == 2) {
-            calculator.subtraction();
-        } else if (calculator.operation == 3) {
-            calculator.multiplication();
-        } else if (calculator.operation == 4) {
-            calculator.division();
+        while (operation >= 5) {
+            System.out.println("Invalid Option, try again");
+            operation = input.nextByte();
+            if (operation <= 4) {
+                break;
+            }
         }
+
+        System.out.println("Type the numbers: ");
+        switch (operation) {
+            case 1:
+                number1 = input.nextDouble();
+                calculator.setNumber1();
+                System.out.println(" + ");
+                number2 = input.nextDouble();
+                calculator.setNumber2();
+                calculator.addition(number1, number2);
+                break;
+            case 2:
+                number1 = input.nextDouble();
+                calculator.setNumber1();
+                System.out.println(" - ");
+                number2 = input.nextDouble();
+                calculator.setNumber2();
+                calculator.subtraction(number1, number2);
+                break;
+            case 3:
+                number1 = input.nextDouble();
+                calculator.setNumber1();
+                System.out.println(" * ");
+                number2 = input.nextDouble();
+                calculator.setNumber2();
+                calculator.multiplication(number1, number2);
+                break;
+            case 4:
+                number1 = input.nextDouble();
+                calculator.setNumber1();
+                System.out.println(" / ");
+                number2 = input.nextDouble();
+                calculator.setNumber2();
+                calculator.division(number1, number2);
+                break;
+        }
+
+
     }
 }

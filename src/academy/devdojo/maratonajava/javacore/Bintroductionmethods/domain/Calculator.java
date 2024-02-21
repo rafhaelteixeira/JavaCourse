@@ -24,7 +24,7 @@ public class Calculator {
     public double divideTwoNumbers(double num1, double num2) {
         if (num2 == 0) {
             return 0;
-            //if the condition returns true, the method will be stoped through the return 0
+            //if the condition returns true, the method will be stoped and return 0
         }
         return num1 / num2;
         //this code will return the division of the numbers passed as arguments in the method call
@@ -46,19 +46,22 @@ public class Calculator {
         //if condition returns true, the method will be stopped
         if (num2 == 0) {
             System.out.println("You can't divide a number by zero");
-        } else {
-            System.out.println(num1 / num2);
-        }
+            return;
+        }//with that syntax we can loose the else statement
+        System.out.println(num1 / num2);
+        //else {
+//            System.out.println(num1 / num2);
+//        }
     }
 
     //when we utilize primitive type as parameters, a copy is made on memory
 //so we are not referencing the original variable - it will never be altered
-    public void alterTwoNumbers(int num1, int num2) {
-        num1 = 99;
-        num2 = 33;
+    public void alterTwoNumbers(int number1, int number2) {
+        number1 = 99;
+        number2 = 33;
         System.out.println("Inside the Method");
-        System.out.println("num1 " + num1);
-        System.out.println("num2 " + num2);
+        System.out.println("num1 " + number1);
+        System.out.println("num2 " + number2);
     }
 
     //we can pass an array as a parameter inside a method the same way we declare them normally

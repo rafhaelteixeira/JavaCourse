@@ -15,7 +15,7 @@ public class Person {
         System.out.println(this.age);
     }
 
-    //we also need a method to get and retunr the attributes
+    //we also need a method to get and return the attributes
     //these methods must return something, in order to be stored.
     //we take no parameters in the get method
     public String getName() {
@@ -30,6 +30,7 @@ public class Person {
     }
 
     public int getAge() {
+
         return this.age;
     }
 

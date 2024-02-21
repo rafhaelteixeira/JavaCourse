@@ -18,6 +18,7 @@ public class Employee {
         for (double salary : salarys) {
             System.out.print(salary + " ");
         }
+        salaryAverage();
     }
 
     public void salaryAverage() {

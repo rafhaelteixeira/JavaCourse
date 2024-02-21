@@ -10,12 +10,15 @@ public class RectangleAreaTest {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Type the lenght of the rectangle: ");
-        rectangle.lenght = input.nextInt();
+        double lenght = input.nextDouble();
+        rectangle.setLenght(lenght);
+
         System.out.println("Type the width of the rectangle: ");
-        rectangle.width = input.nextInt();
+        double width = input.nextDouble();
+        rectangle.setWidth(width);
 
         System.out.println("The rectangle area is: ");
-        rectangle.calculateArea();
+        System.out.println(rectangle.calculateArea());
 
 
     }

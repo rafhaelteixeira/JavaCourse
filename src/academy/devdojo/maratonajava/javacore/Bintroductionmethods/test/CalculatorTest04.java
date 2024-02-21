@@ -5,14 +5,15 @@ import academy.devdojo.maratonajava.javacore.Bintroductionmethods.domain.Calcula
 public class CalculatorTest04 {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
-        int num1 = 1;
-        int num2 = 2;
-
-        calculator.alterTwoNumbers(num1, num2);
+        int a = 1;
+        int b = 2;
+        //even though we initialized two variables at this class, the values initialized inside the method
+        //will be the same, and won't change
+        calculator.alterTwoNumbers(a, b);
 
         System.out.println("Inside CalculatorTest04");
-        System.out.println("Num1 " + num1);
-        System.out.println("Num2 " + num2);
+        System.out.println("Num1 " + a);
+        System.out.println("Num2 " + b);
 
     }
 }

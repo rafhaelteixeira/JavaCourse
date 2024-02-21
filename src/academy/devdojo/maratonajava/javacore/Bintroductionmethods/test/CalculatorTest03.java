@@ -11,6 +11,6 @@ public class CalculatorTest03 {
         System.out.println(calculator.divideTwoNumbers2(20, 2));
         System.out.println("============================================");
 
-        calculator.printDivision(86, 0);
+        calculator.printDivision(86, 5);
     }
 }
