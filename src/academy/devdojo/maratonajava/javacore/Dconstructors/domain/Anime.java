@@ -10,9 +10,12 @@ public class Anime {
     //Constructors don't have any return type
     //we need a constructor to create an object
     //if we don't define a constructor in the class, Java will add one automatically.
+    //constructors forces us to follow some rules to create an object
     public Anime(String name, String type, int episodes, String genre) {
+        //constructors are executed before anything else in the code
         //in order to call a constructor inside another we use a alternative syntax
         this();//we can't utilize that syntax outside constructors
+        System.out.println("Inside the constructor with parameters");
         this.name = name;
         this.type = type;
         this.episodes = episodes;
@@ -32,6 +35,8 @@ public class Anime {
     }
 
     public Anime() {
+        //we can also overload constructors, in this case, we can create an empty object
+        //as well as objects that need arguments
         System.out.println("Inside the constructor without parameters");
 
     }
