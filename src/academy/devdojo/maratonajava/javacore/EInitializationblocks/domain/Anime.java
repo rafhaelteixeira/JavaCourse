@@ -8,7 +8,7 @@ public class Anime {
     //3 - initialization block is executed
     //4 - Constructor is executed
 
-    //instance initialization blocks are executed when a object is created
+    //instance initialization blocks are executed when an object is created
     //they are executed before the constructors and methods
     //we can add a logic inside, in order to not repeat code every time we instantiate an object
     {
