@@ -6,7 +6,7 @@ the names of different products available in the store.*/
 public class ShoppingCart {
     private String[] name;
     private final double price = 3.95;
-    private final int quantity;
+    public final int quantity;
 
     {
         System.out.println("all items for: " + this.price);
