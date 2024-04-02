@@ -5,6 +5,7 @@ public class Developer extends Employee{
         super(name, salary);
     }
 
+    //implementing the abstract method
     @Override
     public void calculateBonus() {
         this.salary = this.salary + this.salary * 0.05;
