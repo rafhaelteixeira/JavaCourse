@@ -8,7 +8,9 @@ import academy.devdojo.maratonajava.javacore.Npolymorphism.service.TaxesCalculat
 public class ProductTest03 {
     public static void main(String[] args) {
         Product product = new Computer("Ryzen 9", 3000);
+        //since expirationDate is an attribute of the ChildClass, we can't call it with the Superclass
         Tomatoe tomatoe = new Tomatoe("American", 20);
+        //we must instantiate a Tomatoe class in order to get the expirationDate
         tomatoe.setExpirationDate("11/12/2021");
 
         TaxesCalculator.calculateTax(tomatoe);

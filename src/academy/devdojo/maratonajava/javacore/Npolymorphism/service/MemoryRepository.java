@@ -1,6 +1,6 @@
 package academy.devdojo.maratonajava.javacore.Npolymorphism.service;
 
-import academy.devdojo.maratonajava.javacore.Npolymorphism.domain.repository.Repository;
+import academy.devdojo.maratonajava.javacore.Npolymorphism.repository.Repository;
 
 public class MemoryRepository implements Repository {
     @Override
