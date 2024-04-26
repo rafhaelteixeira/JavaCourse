@@ -1,0 +1,22 @@
+Exceptions like all things in java are objects
+
+They come from the class Throwable, and subdivide into two others:
+Error and Exception
+
+Errors are situations where we can't recover from
+for example: outOfMemmoryError
+in this case we cannot do anything that the JVM did not try before. when we have an error, usually the JVM stops executing
+Another one is the stack overflow error, when we overflow the stack memmory of a method call
+see example on the StackOverflowTest01 class.
+
+The Exception class also extends the Throwable class
+we have two types of Exceptions
+
+Checked: They are children of the Exception class directly and if not treated, they'll return an compilation error
+
+Unchecked: they involve the RuntimeException Class as well as it's children. with those exceptions, almost everytime
+they are thrown, some development mistake was made. i'ts not mandatory to treat them, but it is a good practice
+see example on the RuntimeExceptionTest01
+
+Exception
+

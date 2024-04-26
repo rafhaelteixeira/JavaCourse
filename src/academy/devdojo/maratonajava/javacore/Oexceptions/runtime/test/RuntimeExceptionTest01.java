@@ -2,18 +2,17 @@ package academy.devdojo.maratonajava.javacore.Oexceptions.runtime.test;
 
 public class RuntimeExceptionTest01 {
     public static void main(String[] args) {
-        //Checked and Unchecked
-        //runtime are Unchecked exceptions happens when there is a development error
-        //we do not need to make validations in order for the code compiles
+        //a few examples of runtime exceptions
 
-        //This code will throw a nullPointer exception
+        //if we try to call a method from a null object, we'll get a NullPointerException
         Object object = null;
         System.out.println(object.toString());
 
-        //this code will throw indexOutOfBounds exception
-        int[] nums = new int[]{1,2};
+        //if we try to access an array index that doesn't exists, we'll get an ArrayIndexOutOfBoundsException
+        int nums[] = {1,2};
         System.out.println(nums[2]);
 
-
+        //note that the code compiles, so we don't need to provide treatment to these exceptions
+        //the exception occurs at run time
     }
 }
